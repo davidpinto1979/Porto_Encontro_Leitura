@@ -402,3 +402,111 @@ footer {
         max-width: 180px; /* Um pouco menor em ecrãs pequenos */
     }
 }
+
+
+
+
+
+
+
+
+section {
+    margin-bottom: 6rem;
+}
+
+section img {
+    max-width: 100%;
+}
+
+section .titulo h2 {
+    color: #2c3e50;
+    border-bottom: 3px solid grey;
+    border-top: 3px solid grey;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+section .conteudo {
+    display: flex;
+    flex-wrap: wrap;       /* Permite que as miniaturas passem para baixo */
+    gap: 15px;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+section .conteudo p {
+    text-align: justify;
+    margin: 0;
+    line-height: 1.5rem;
+    color: #333;
+}
+
+
+
+
+
+/* Estilo para a imagem de destaque (a primeira) */
+.foto-principal {
+    flex: 1 1 100%;        /* OBRIGA a imagem principal a ocupar a linha toda */
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centra a imagem e o texto "Ver Galeria" */
+    margin-bottom: 20px;
+}
+
+.foto-principal img {
+    width: 100%;
+    max-width: 800px;      /* Pode ajustar o tamanho máximo da foto principal aqui */
+    height: auto;          /* Mantém a proporção original */
+    max-height: 500px;     /* Evita que fique gigante em ecrãs muito grandes */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Estilo para as miniaturas */
+.miniatura {
+    width: 150px;          /* Tamanho fixo para as miniaturas */
+    height: 100px;
+}
+
+.miniatura img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.miniatura img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+
+/* Estilo para o texto da foto principal */
+.caption_top {
+    text-align: center;
+    font-weight: bold;
+    color: #d35400;
+    margin-top: 10px;
+}
+
+/* Estilo para o texto das miniaturas */
+.caption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #2c3e50;
+    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Corta o texto se for muito longo */
+}
+
+/* Garante que o link não tenha sublinhado por defeito */
+.miniatura a, .foto-principal a {
+    text-decoration: none;
+    display: block;
+}

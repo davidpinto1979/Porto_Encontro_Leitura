@@ -13,6 +13,12 @@
 
 
         <link rel="stylesheet" href="styles.css" />
+
+
+        <!--FANCY BOX CDN para galeria de fotos -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css">
+
+
     </head>
     <body>
         <header>
@@ -48,6 +54,39 @@
             </section>
 
 
+            <section>                
+                <div class="conteudo">
+                    <div class="foto-principal">
+                        <a href="goteira.jpg" data-fancybox="gallery" data-caption="Goteira na Bedeteca">
+                            <img src="goteira.jpg" alt="Goteira na Bedeteca" />
+                            <p class="caption_top">Goteira na Bedeteca</p>
+                        </a>
+                    </div>
+
+                    <div class="miniatura">
+                        <a href="batalha.jpg" data-fancybox="gallery" data-caption="Batalha Centro de Cinema">
+                            <img src="batalha.jpg" alt="Batalha Centro de Cinema" />
+                            <p class="caption">Batalha Centro de Cinema</p>
+                        </a>
+                    </div>
+                    <div class="miniatura">
+                        <a href="garret.jpg" data-fancybox="gallery" data-caption="Biblioteca Almeida Garret">
+                            <img src="garret.jpg" alt="Biblioteca Almeida Garret" />
+                            <p class="caption">Biblioteca Almeida Garret</p>
+                        </a>
+                    </div>
+                    <div class="miniatura">
+                        <a href="readingclub1.jpeg" data-fancybox="gallery" data-caption="Clube de Leitura">
+                            <img src="readingclub1.jpeg" alt="Clube de Leitura" />
+                            <p class="caption">Clube de Leitura</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+
+
             <section class="intro">
                 <p>Partilhe connosco os clubes de leitura que conhece na cidade do Porto!</p>
                 <a href="contactos.html" class="btn-link">Ver Contactos</a>
@@ -75,6 +114,25 @@
     </footer>
 
 
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+            Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+            });
+        </script>
+
+        <script>
+            Fancybox.bind("[data-fancybox]", {
+                // Your custom options
+            });
+            const images = document.querySelectorAll("[data-fancybox]");
+            images.forEach((image) => {
+                image.setAttribute(
+                    "data-caption",
+                    image.lastElementChild.innerText,
+                );
+            });
+        </script>
 
 
 
