@@ -246,6 +246,25 @@ footer {
     transform: scale(1.2);
 }
 
+.creditos-formacao {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Uma linha subtil para separar do formulário */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.creditos-formacao a {
+    color: #007bff; /* Cor azul padrão para links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.creditos-formacao a:hover {
+    text-decoration: underline;
+}
+
 
 
 
